@@ -9,9 +9,9 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "app_server" {
+resource "aws_instance" "server" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.medium"
+  instance_type = var.instance_type
 
   tags = {
     Name = "odoo-terraform"
