@@ -16,13 +16,9 @@ The infrastructure as code (IaC) handles the following:
 
 
 * **Automated Setup:** Uses an EC2 `user_data` script (`script.sh`) to automatically:
-
-
-* Install Git, Docker, and Docker Compose.
-* Clone the [odoo-docker](https://github.com/sutaranup/odoo-docker) repository.
-* Generate a secure database password and launch the application.
-
-
+    1. Install Git, Docker, and Docker Compose.
+    2. Clone the [odoo-docker](https://github.com/sutaranup/odoo-docker) repository.
+    3. Generate a secure database password and launch the application.
 
 ---
 
@@ -70,9 +66,7 @@ After a successful deployment, Terraform will output the connection details:
 
 * **Instance Public IP:** The static Elastic IP.
 
-
 * **Instance Public DNS:** The AWS-assigned DNS name.
-
 
 Use these addresses in your browser to access the Odoo setup wizard on Port 80.
 
@@ -82,13 +76,9 @@ Use these addresses in your browser to access the Odoo setup wizard on Port 80.
 
 * **Provider:** AWS (`~> 6.0`).
 
-
 * **Region:** Defaulted to `us-east-1`.
 
-
 * **.gitignore:** Pre-configured to ignore local `.terraform` files, `.tfstate`, and sensitive `.tfvars` files.
-
-
 
 ---
 
