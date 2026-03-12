@@ -27,7 +27,6 @@ sudo systemctl start docker
 sudo systemctl enable docker
 
 # Run Docker without sudo
-sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 
