@@ -6,20 +6,16 @@
 
 The infrastructure as code (IaC) handles the following:
 
-* 
-**Instance Provisioning:** Launches an Amazon EC2 instance running **Ubuntu 24.04 (Noble)**.
+* **Instance Provisioning:** Launches an Amazon EC2 instance running **Ubuntu 24.04 (Noble)**.
 
 
-* 
-**Networking:** Uses the default VPC and attaches an **Elastic IP (EIP)** to ensure a persistent public IP address.
+* **Networking:** Uses the default VPC and attaches an **Elastic IP (EIP)** to ensure a persistent public IP address.
 
 
-* 
-**Security:** Creates a security group allowing inbound traffic on **Port 80 (HTTP)** and **Port 22 (SSH)**.
+* **Security:** Creates a security group allowing inbound traffic on **Port 80 (HTTP)** and **Port 22 (SSH)**.
 
 
-* 
-**Automated Setup:** Uses an EC2 `user_data` script (`script.sh`) to automatically:
+* **Automated Setup:** Uses an EC2 `user_data` script (`script.sh`) to automatically:
 
 
 * Install Git, Docker, and Docker Compose.
@@ -53,10 +49,7 @@ terraform init \
 
 ```
 
-> 
 > **Note:** Replace `YOUR_BUCKET_NAME` with your actual S3 bucket name.
-> 
-> 
 
 ### 3. Deployment
 
@@ -75,13 +68,10 @@ The configuration includes validation to ensure only `t3` series instances are u
 
 After a successful deployment, Terraform will output the connection details:
 
-* 
-**Instance Public IP:** The static Elastic IP.
+* **Instance Public IP:** The static Elastic IP.
 
 
-* 
-**Instance Public DNS:** The AWS-assigned DNS name.
-
+* **Instance Public DNS:** The AWS-assigned DNS name.
 
 
 Use these addresses in your browser to access the Odoo setup wizard on Port 80.
@@ -90,16 +80,13 @@ Use these addresses in your browser to access the Odoo setup wizard on Port 80.
 
 ## 🛠️ Configuration Details
 
-* 
-**Provider:** AWS (`~> 6.0`).
+* **Provider:** AWS (`~> 6.0`).
 
 
-* 
-**Region:** Defaulted to `us-east-1`.
+* **Region:** Defaulted to `us-east-1`.
 
 
-* 
-**.gitignore:** Pre-configured to ignore local `.terraform` files, `.tfstate`, and sensitive `.tfvars` files.
+* **.gitignore:** Pre-configured to ignore local `.terraform` files, `.tfstate`, and sensitive `.tfvars` files.
 
 
 
@@ -107,4 +94,4 @@ Use these addresses in your browser to access the Odoo setup wizard on Port 80.
 
 ## ⚖️ License
 
-This project is released under the **Unlicense**, making it free and unencumbered software released into the public domain. You are free to copy, modify, and distribute it for any purpose. See the [LICENSE](https://www.google.com/search?q=LICENSE) file for more details.
+This project is released under the **Unlicense**, making it free and unencumbered software released into the public domain. You are free to copy, modify, and distribute it for any purpose. See the [LICENSE](https://unlicense.org/) file for more details.
