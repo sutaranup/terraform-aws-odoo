@@ -6,7 +6,7 @@ resource "aws_security_group" "odoo_sg" {
   name        = "odoo_security_group"
   description = "odoo security group in the default VPC"
   # Reference the ID of the default VPC using data.aws_vpc.default.id
-  vpc_id      = data.aws_vpc.default.id
+  vpc_id = data.aws_vpc.default.id
 
   ingress {
     from_port   = 80
